@@ -6,21 +6,18 @@ class Programa
         // TODO: Lista
         List<string> names = new List<string> { "Guilherme", "Gabriel", "Gustavo" };
 
-        Console.WriteLine("");
         // TODO: For 
         for (int i = 0; i < names.Count; i++)
         {
             Console.WriteLine(names[i]);
         }
 
-        Console.WriteLine("");
         // TODO: For Each
         foreach (string item in names)
         {
             Console.WriteLine(item);
         }
 
-        Console.WriteLine("");
         // TODO: Operações com String
         string name = "Guilherme";
         Console.WriteLine(name.Length); // Tamanho
@@ -32,20 +29,17 @@ class Programa
         Console.WriteLine(string.Join(" ", names)); // Junta uma lista de strings
         Console.WriteLine(10.ToString()); // Converte não só Int, mas qualquer tipo para String
 
-        Console.WriteLine("");
         // TODO: Conversão de STRING > INT
         int x = int.Parse("10");
         Console.WriteLine(x.GetType());
         int.TryParse("10", out int z);
         Console.WriteLine(z.GetType());
 
-        Console.WriteLine("");
         // TODO: Referenciando Classes.
         Teste t = new Teste();
         t.X = 10;
         Console.WriteLine(t.X);
 
-        Console.WriteLine("");
         // TODO: Declaração NULL
         //Variáveis de valor (como int, double, bool) não podem ser null a menos que sejam declaradas como nullable usando o operador ?.
         // Declarando uma variável de referência como null
