@@ -53,33 +53,35 @@ class Programa
 
 class Teste
 {
+    // usar o public permite que eu altere a variavel de fora da Classe, o que pode ser perigoso.
     public int X;
 }
 
 // TODO: Exemplo de construtor de classe.
 class BankAccount
 {
-    private string? name;
-    private decimal? value;
+    // usar o private ou deixar sem nada, assegura de que a variavel de construtor seja usada apenas pelo construtor ou internamente.
+    private string name;
+    private decimal balance;
 
-    // TODO: Exemplo de metodo construtor.
+    // TODO: Metodo Construtor.
     // O construtor deve ter o mesmo nome da Classe
-    public BankAccount(string name, decimal value)
+    public BankAccount(string name, decimal balance)
     {
-        if (string.IsNullOrWhiteSpace(name))
-        {
-            throw new Exception("Nome Inválido");
-        }
-        if (value < 0)
-        {
-            throw new Exception("Saldo negativo");
-        }
+        // if (string.IsNullOrWhiteSpace(name))
+        // {
+        //     throw new Exception("Nome Inválido");
+        // }
+        // if (value < 0)
+        // {
+        //     throw new Exception("Saldo negativo");
+        // }
         this.name = name;
-        this.value = value;
+        this.balance = balance;
     }
 
-    public void AddMoney()
+    public void Deposit(Decimal amount)
     {
-
+        balance = balance + amount;
     }
 }
