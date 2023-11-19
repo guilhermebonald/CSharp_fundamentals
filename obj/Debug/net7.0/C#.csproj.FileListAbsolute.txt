@@ -1,0 +1,15 @@
+/home/bonald/Code/C#/bin/Debug/net7.0/C#
+/home/bonald/Code/C#/bin/Debug/net7.0/C#.deps.json
+/home/bonald/Code/C#/bin/Debug/net7.0/C#.runtimeconfig.json
+/home/bonald/Code/C#/bin/Debug/net7.0/C#.dll
+/home/bonald/Code/C#/bin/Debug/net7.0/C#.pdb
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.csproj.AssemblyReference.cache
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.AssemblyInfoInputs.cache
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.AssemblyInfo.cs
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.csproj.CoreCompileInputs.cache
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.dll
+/home/bonald/Code/C#/obj/Debug/net7.0/refint/C#.dll
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.pdb
+/home/bonald/Code/C#/obj/Debug/net7.0/C#.genruntimeconfig.cache
+/home/bonald/Code/C#/obj/Debug/net7.0/ref/C#.dll
