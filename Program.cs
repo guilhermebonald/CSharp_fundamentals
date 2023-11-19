@@ -4,7 +4,7 @@ class Programa
     static void Main()
     {
         // TODO: Lista
-        List<string> names = new List<string> { "Guilherme", "Gabriel", "Gustavo" };
+        List<string> names = new List<string> { "Joao", "Marcos", "Lucas" };
 
         // TODO: For 
         for (int i = 0; i < names.Count; i++)
@@ -48,6 +48,17 @@ class Programa
         // Declarando uma variável nullable como null
         int? meuInteiro = null;
         Console.WriteLine($"minhaString: {minhaString}, meuInteiro: {meuInteiro}");
+
+        // TODO: BankAccount Set
+        BankAccount account1 = new BankAccount("Mateus", 100);
+        BankAccount account2 = new BankAccount("Marcos", 250);
+
+        account1.Deposit(100);
+        account2.Deposit(50);
+
+        Console.WriteLine($"Balanço da Conta: {account1.GetBalance()}");
+        Console.WriteLine($"Balanço da Conta: {account2.GetBalance()}");
+
     }
 }
 
@@ -57,31 +68,33 @@ class Teste
     public int X;
 }
 
-// TODO: Exemplo de construtor de classe.
 class BankAccount
 {
     // usar o private ou deixar sem nada, assegura de que a variavel de construtor seja usada apenas pelo construtor ou internamente.
+    // TODO: Variavel de Instancia
     private string name;
     private decimal balance;
 
     // TODO: Metodo Construtor.
-    // O construtor deve ter o mesmo nome da Classe
+    // * O construtor deve ter o mesmo nome da Classe
     public BankAccount(string name, decimal balance)
     {
-        // if (string.IsNullOrWhiteSpace(name))
-        // {
-        //     throw new Exception("Nome Inválido");
-        // }
-        // if (value < 0)
-        // {
-        //     throw new Exception("Saldo negativo");
-        // }
+        // this. faz referencia a variavel de instancia.
         this.name = name;
         this.balance = balance;
     }
 
     public void Deposit(Decimal amount)
     {
-        balance = balance + amount;
+        if (amount < 0)
+        {
+            return;
+        }
+        balance += amount;
+    }
+
+    public decimal GetBalance()
+    {
+        return balance;
     }
 }
