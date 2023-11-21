@@ -50,8 +50,9 @@ class Programa
         Console.WriteLine($"minhaString: {minhaString}, meuInteiro: {meuInteiro}");
 
         // TODO: BankAccount Set
-        BankAccount account1 = new BankAccount("Mateus", 100);
-        BankAccount account2 = new BankAccount("Marcos", 250);
+        ConsoleLogger logger = new ConsoleLogger();
+        BankAccount account1 = new BankAccount("Mateus", -100, logger);
+        BankAccount account2 = new BankAccount("Marcos", 250, logger);
 
         account1.Deposit(100);
         account2.Deposit(50);
@@ -74,21 +75,23 @@ class BankAccount
     // TODO: Variavel de Instancia
     private string name;
     private decimal balance;
+    private ILogger logger;
 
     // TODO: Metodo Construtor.
     // * O construtor deve ter o mesmo nome da Classe
-    public BankAccount(string name, decimal balance)
+    public BankAccount(string name, decimal balance, ILogger logger)
     {
         // this. faz referencia a variavel de instancia.
         this.name = name;
         this.balance = balance;
+        this.logger = logger;
     }
 
     public void Deposit(Decimal amount)
     {
         if (amount < 0)
         {
-            return;
+            logger.Log($"Não é possivel adicionar {amount} para {this.name}");
         }
         balance += amount;
     }
@@ -96,5 +99,20 @@ class BankAccount
     public decimal GetBalance()
     {
         return balance;
+    }
+}
+
+// TODO: Interfaces
+interface ILogger
+{
+    void Log(string message);
+}
+
+// TODO: Classe que implementar a Interface
+class ConsoleLogger : ILogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine($"Logger Interface: {message}");
     }
 }
