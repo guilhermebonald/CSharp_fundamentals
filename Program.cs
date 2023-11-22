@@ -5,6 +5,12 @@ class Programa
     {
         // TODO: Lista
         List<string> names = new List<string> { "Joao", "Marcos", "Lucas" };
+        // * ou
+        List<string> names1 = new List<string>();
+        // add to list
+        names1.Add("Joao");
+        // remove
+        names1.Remove("Joao");
 
         // TODO: For 
         for (int i = 0; i < names.Count; i++)
@@ -51,14 +57,22 @@ class Programa
 
         // TODO: BankAccount Set
         ConsoleLogger logger = new ConsoleLogger();
-        BankAccount account1 = new BankAccount("Mateus", -100, logger);
+        BankAccount account1 = new BankAccount("Mateus", 100, logger);
         BankAccount account2 = new BankAccount("Marcos", 250, logger);
 
-        account1.Deposit(100);
+        account1.Deposit(-100);
         account2.Deposit(50);
 
         Console.WriteLine($"Balanço da Conta: {account1.GetBalance()}");
         Console.WriteLine($"Balanço da Conta: {account2.GetBalance()}");
+
+        // TODO: Delegate/Lambda Expression
+        var multiply = (int x, int y) => x * y;
+        var sum = delegate (int x, int y) { return x + y; };
+
+        // Declarando o tipo
+        // O último tipo é o que será retornado, e os primeiros o que será passado como argumento.
+        Func<int, int, int> subtract = delegate (int x, int y) { return x - y; };
 
     }
 }
